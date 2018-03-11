@@ -1,0 +1,27 @@
+<!--pages/gdkq/index.wxml-->
+<view class="container">
+  <template is="head" data="{{title: 'form'}}"/>
+
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+
+      <view class="page-section">
+        <view class="page-section-title">当天工数</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input class="weui-input" name="input" placeholder="填写当天的工数" />
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button type="primary" formType="submit">提交</button>
+        <button formType="reset">重填</button>
+      </view>
+    </form>
+  </view>
+
+  <template is="foot" />
+</view>
