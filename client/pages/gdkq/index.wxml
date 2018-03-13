@@ -1,6 +1,5 @@
 <!--pages/gdkq/index.wxml-->
 <view class="container">
-  <template is="head" data="{{title: 'form'}}"/>
 <!-- 用户登录测试 -->
     <view class="userinfo" bindtap="login">
         <image
@@ -21,7 +20,8 @@
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
             <view class="weui-cell__bd">
-              <input class="weui-input" name="input" placeholder="填写当天的工数" />
+              <input class="weui-input" name="input1" placeholder="填写当天的工数" />
+               <input class="weui-input" name="input2" placeholder="填写当天的工数2" />
             </view>
           </view>
         </view>
@@ -33,6 +33,4 @@
       </view>
     </form>
   </view>
-
-  <template is="foot" />
 </view>
