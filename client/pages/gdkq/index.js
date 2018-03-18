@@ -115,7 +115,20 @@ Page({
    * 用户点击提交
    */
   formSubmit: function (e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    qcloud.setLoginUrl(config.service.loginUrl,);
+    console.log('form发生了submit事件，携带数据为：', e.detail.value);
+    qcloud.request({
+      login: true,
+      method:'GET',
+      url: 'https://zc1ohkk7.qcloud.la/weapp/addkq',
+      success: function (response) {
+        console.log('成功',response.data);
+      },
+      fail: function (err) {
+        console.log(err);
+      }
+    });
+    
   },
     /**
    * 用户点击重填

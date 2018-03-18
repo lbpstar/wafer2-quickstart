@@ -31,5 +31,8 @@ router.post('/tunnel', controllers.tunnel.post)
 router.get('/message', controllers.message.get)
 // POST 用来处理微信转发过来的客服消息
 router.post('/message', controllers.message.post)
+// 新增记工
+//router.get('/addkq', controllers.addkq)
+router.get('/addkq', controllers.addkq)
 
 module.exports = router

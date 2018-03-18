@@ -20,8 +20,8 @@
         <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell weui-cell_input">
             <view class="weui-cell__bd">
-              <input class="weui-input" name="input1" placeholder="填写当天的工数" />
-               <input class="weui-input" name="input2" placeholder="填写当天的工数2" />
+            <input class="weui-input" name="input1" placeholder="填写当天的工数" />
+              <input class="weui-input" name="input2" placeholder="填写当天的工数" />
             </view>
           </view>
         </view>
