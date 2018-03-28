@@ -115,20 +115,24 @@ Page({
    * 用户点击提交
    */
   formSubmit: function (e) {
-    qcloud.setLoginUrl(config.service.loginUrl,);
-    console.log('form发生了submit事件，携带数据为：', e.detail.value);
-    qcloud.request({
-      login: true,
-      method:'GET',
+    util.showBusy('请求中...')
+    var that = this
+    var options = {
       url: 'https://zc1ohkk7.qcloud.la/weapp/addkq',
-      success: function (response) {
-        console.log('成功',response.data);
+      login: true,
+      success(result) {
+        util.showSuccess('请求成功完成')
+        console.log('request success', result)
+        that.setData({
+          requestResult: JSON.stringify(result.data)
+        })
       },
-      fail: function (err) {
-        console.log(err);
+      fail(error) {
+        util.showModel('请求失败', error);
+        console.log('request fail', error);
       }
-    });
-    
+    }
+      qcloud.request(options)
   },
     /**
    * 用户点击重填
