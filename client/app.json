@@ -1,7 +1,8 @@
 {
   "pages":[
-   "pages/gdkq/index",
+      "pages/gdkq/index",
    "pages/index/index",
+
     "pages/addCgi/addCgi"
   ],
   "window":{
