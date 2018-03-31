@@ -33,6 +33,6 @@ router.get('/message', controllers.message.get)
 router.post('/message', controllers.message.post)
 // 新增记工
 //router.get('/addkq', controllers.addkq)
-router.get('/addkq', controllers.addkq)
-
+//router.get('/addkq', controllers.addkq)
+router.get('/addkq', validationMiddleware, controllers.addkq)
 module.exports = router

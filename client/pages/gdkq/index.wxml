@@ -23,6 +23,7 @@
             <input class="weui-input" name="input1" placeholder="填写当天的工数" />
               <input class="weui-input" name="input2" placeholder="填写当天的工数" />
             </view>
+            
           </view>
         </view>
       </view>
@@ -31,6 +32,12 @@
         <button type="primary" formType="submit">提交</button>
         <button formType="reset">重填</button>
       </view>
+              <view class="tunnel-text uploader-text">
+            <text bindtap="doRequest">请求</text>
+        </view>
+        <view class="tunnel-text" wx:if="{{requestResult}}">
+            <text class="request-text">{{'请求结果：' + requestResult}}</text>
+        </view>
     </form>
   </view>
 </view>

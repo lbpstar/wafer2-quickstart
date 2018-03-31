@@ -124,7 +124,9 @@ Page({
         util.showSuccess('请求成功完成')
         console.log('request success', result)
         that.setData({
-          requestResult: JSON.stringify(result.data)
+          //requestResult: JSON.stringify(result.data),
+          userInfo: result.data.data,
+          logged: true
         })
       },
       fail(error) {
@@ -142,5 +144,25 @@ Page({
     this.setData({
       chosen: ''
     })
-  }
+  },
+  doRequest: function () {
+    util.showBusy('请求中...')
+    var that = this
+    var options = {
+      url: config.service.requestUrl,
+      login: true,
+      success(result) {
+        util.showSuccess('请求成功完成')
+        console.log('request success', result)
+        that.setData({
+          requestResult: JSON.stringify(result.data)
+        })
+      },
+      fail(error) {
+        util.showModel('请求失败', error);
+        console.log('request fail', error);
+      }
+    }
+      qcloud.request(options)
+  },
 })
