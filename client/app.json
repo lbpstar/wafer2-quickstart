@@ -1,15 +1,14 @@
 {
   "pages":[
-      "pages/gdkq/index",
-   "pages/index/index",
-
+    "pages/index/index",
+    "pages/gdkq/index",
     "pages/addCgi/addCgi"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "Wafer Quick Start",
+    "navigationBarTitleText": "The One",
     "navigationBarTextStyle":"black"
   }
 }
